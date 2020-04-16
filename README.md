@@ -172,6 +172,7 @@ Available targets:
 | report_build_status | Set to true to report the status of a build's start and finish to your source provider. This option is only valid when the source_type is BITBUCKET or GITHUB | bool | `false` | no |
 | source_location | The location of the source code from git or s3 | string | `` | no |
 | source_type | The type of repository that contains the source code to be built. Valid values for this parameter are: CODECOMMIT, CODEPIPELINE, GITHUB, GITHUB_ENTERPRISE, BITBUCKET or S3 | string | `CODEPIPELINE` | no |
+| source_version | Enter a pull request, branch, commit ID, tag, or reference and a commit ID. Branch as a branch name/Commit ID/Tag/Reference and a commit ID. - https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html | string | `` | no |
 | stage | Stage, e.g. 'prod', 'staging', 'dev', or 'test' | string | `` | no |
 | tags | Additional tags (e.g. `map('BusinessUnit', 'XYZ')` | map(string) | `<map>` | no |
 
