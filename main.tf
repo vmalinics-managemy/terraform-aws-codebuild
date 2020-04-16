@@ -175,11 +175,12 @@ resource "aws_iam_role_policy_attachment" "default_cache_bucket" {
 }
 
 resource "aws_codebuild_project" "default" {
-  count         = var.enabled ? 1 : 0
-  name          = module.label.id
-  service_role  = join("", aws_iam_role.default.*.arn)
-  badge_enabled = var.badge_enabled
-  build_timeout = var.build_timeout
+  count          = var.enabled ? 1 : 0
+  name           = module.label.id
+  service_role   = join("", aws_iam_role.default.*.arn)
+  badge_enabled  = var.badge_enabled
+  build_timeout  = var.build_timeout
+  source_version = var.source_version
 
   artifacts {
     type = var.artifact_type
