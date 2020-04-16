@@ -155,6 +155,12 @@ variable "source_location" {
   description = "The location of the source code from git or s3"
 }
 
+variable "source_version" {
+  type        = string
+  default     = ""
+  description = "Enter a pull request, branch, commit ID, tag, or reference and a commit ID"
+}
+
 variable "artifact_type" {
   type        = string
   default     = "CODEPIPELINE"
